@@ -56,8 +56,8 @@ modules:
       - gnome-settings-daemon
       #- cheese
       #- eog
-      - evince
-      - evince-djvu
+      #- evince
+      #- evince-djvu
       - gnome-backgrounds
       - gnome-user-share
       - gnome-characters
