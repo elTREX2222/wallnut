@@ -36,7 +36,7 @@ modules:
       - gnome-session
       - gnome-session-*
       #- gnome-control-center
-      - gnome-settings-daemon
+      #- gnome-settings-daemon
       - gnome-initial-setup
       - gnome-software
       - gnome-classic-session
