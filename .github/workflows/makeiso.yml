@@ -1,6 +1,6 @@
 - name: Build ISO
-	uses: jasonn3/build-container-installer@main
   id: build
+  uses: jasonn3/build-container-installer@main
   with:
     arch: ${{ env.ARCH}}
     image_name: ${{ env.IMAGE_NAME}}
