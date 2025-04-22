@@ -42,11 +42,11 @@ modules:
       #- gnome-user-docs
       #- yelp
       #- gnome-maps
-      - gnome-contacts
-      - gnome-photos
+      #- gnome-contacts
+      #- gnome-photos
       - xdg-desktop-portal-gnome
       - nautilus
-      - gnome-screenshot
+      #- gnome-screenshot
       - gnome-shell
       #- gnome-control-center
       
