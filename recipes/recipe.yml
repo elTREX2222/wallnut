@@ -40,7 +40,7 @@ modules:
       - gnome-initial-setup
       - gnome-software
       - gnome-classic-session
-      - chrome-gnome-shell
+      #- chrome-gnome-shell
       - gnome-terminal-nautilus
       - gnome-remote-desktop
       - gnome-user-docs
