@@ -55,7 +55,7 @@ modules:
       - gnome-control-center
       - gnome-settings-daemon
       #- cheese
-      - eog
+      #- eog
       - evince
       - evince-djvu
       - gnome-backgrounds
