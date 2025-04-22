@@ -20,14 +20,50 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-%OS_VERSION%/yalter-niri-fedora-%OS_VERSION%.repo #for niri WM
     install:
       - micro
       - starship
+      - xdg-desktop-portal-wlr
+      - alacritty
+      - nemo
+      - niri
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - gnome-shell
+      - gnome-session
+      - gnome-session-*
+      - gnome-control-center
+      - gnome-settings-daemon
+      - gnome-initial-setup
+      - gnome-software
+      - gnome-classic-session
+      - chrome-gnome-shell
+      - gnome-terminal-nautilus
+      - gnome-remote-desktop
+      - gnome-user-docs
+      - yelp
+      - gnome-maps
+      - gnome-contacts
+      - gnome-photos
+      - xdg-desktop-portal-gnome
+      - nautilus
+      - gnome-screenshot
+      - gnome-shell
+      - gnome-control-center
+      - gnome-settings-daemon
+      - cheese
+      - eog
+      - evince
+      - evince-djvu
+      - gnome-backgrounds
+      - gnome-user-share
+      - gnome-characters
+      - gnome-logs
+      
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -41,9 +77,16 @@ modules:
         - org.gnome.Weather
         - io.github.nokse22.Exhibit
         - org.freedesktop.Platform.VulkanLayer.vkBasalt
-        - org.gnome.Contacts
+        # - org.gnome.Contacts
         - org.gnome.Papers
         - de.leopoldluley.Clapgrep
+        - org.gnome.NautilusPreviewer
+        - org.gnome.TextEditor
+        - org.gnome.Papers
+        - org.gnome.Logs
+        - 
+        - 
+        - 
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
