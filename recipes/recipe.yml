@@ -35,8 +35,8 @@ modules:
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-session
       - gnome-session-*
-      - gnome-initial-setup
-      - gnome-software
+      #- gnome-initial-setup
+      #- gnome-software
       - gnome-terminal-nautilus
       - gnome-remote-desktop
       #- gnome-user-docs
