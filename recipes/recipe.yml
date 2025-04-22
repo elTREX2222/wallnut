@@ -48,6 +48,7 @@ modules:
       - nautilus
       #- gnome-screenshot
       - gnome-shell
+      - gdm
       #- gnome-control-center
       
 
