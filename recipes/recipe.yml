@@ -37,24 +37,18 @@ modules:
       - gnome-session-*
       - gnome-initial-setup
       - gnome-software
-      - gnome-classic-session
       - gnome-terminal-nautilus
       - gnome-remote-desktop
-      - gnome-user-docs
-      - yelp
-      - gnome-maps
+      #- gnome-user-docs
+      #- yelp
+      #- gnome-maps
       - gnome-contacts
       - gnome-photos
       - xdg-desktop-portal-gnome
       - nautilus
       - gnome-screenshot
       - gnome-shell
-      - gnome-control-center
-      #- gnome-settings-daemon
-      #- gnome-backgrounds
-      #- gnome-user-share
-      #- gnome-characters
-      #- gnome-logs
+      #- gnome-control-center
       
 
   - type: default-flatpaks
