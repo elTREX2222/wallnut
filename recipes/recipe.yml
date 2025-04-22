@@ -6,7 +6,7 @@ name: wallnut
 description: This is my personal OS image based on bazzite with niri as WM and other minor changes.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome
+base-image: ghcr.io/ublue-os/ucore-hci:stable
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -55,16 +55,6 @@ modules:
         - org.gnome.Loupe
       remove:
         - org.gnome.eog
-        - org.gnome.Weather
-        - io.github.nokse22.Exhibit
-        - org.freedesktop.Platform.VulkanLayer.vkBasalt
-        # - org.gnome.Contacts
-        - org.gnome.Papers
-        - de.leopoldluley.Clapgrep
-        - org.gnome.NautilusPreviewer
-        - org.gnome.TextEditor
-        - org.gnome.Papers
-        - org.gnome.Logs
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
