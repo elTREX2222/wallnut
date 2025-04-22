@@ -52,8 +52,6 @@ modules:
       - gnome-shell-extension-just-perfection
       - gnome-shell.switcheroo
       - gnome-browser-connector
-      - 
-      - 
       
       #- gnome-control-center
       
