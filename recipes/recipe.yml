@@ -38,6 +38,12 @@ modules:
         - org.gnome.Loupe
       remove:
         - org.gnome.eog
+        - org.gnome.Weather
+        - io.github.nokse22.Exhibit
+        - org.freedesktop.Platform.VulkanLayer.vkBasalt
+        - org.gnome.Contacts
+        - org.gnome.Papers
+        - de.leopoldluley.Clapgrep
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
