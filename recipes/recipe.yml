@@ -37,7 +37,7 @@ modules:
       - gnome-session-*
       #- gnome-initial-setup
       #- gnome-software
-      - gnome-terminal-nautilus
+      #- gnome-terminal-nautilus
       - gnome-remote-desktop
       #- gnome-user-docs
       #- yelp
