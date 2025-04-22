@@ -10,6 +10,12 @@
     variant: ${{ env.VARIANT }}
     iso_name: ${{ env.IMAGE_NAME }}-${{ env.IMAGE_TAG }}-${{ env.VERSION }}.iso
 
+- name: Debug ISO Path
+  run: |
+    echo "ISO path: ${{ steps.build.outputs.iso_path }}"
+    ls -lah ${{ steps.build.outputs.iso_path }}
+
+    
 # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
 - name: Upload ISO as artifact
   id: upload
