@@ -35,7 +35,7 @@ modules:
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-session
       - gnome-session-*
-      - gnome-control-center
+      #- gnome-control-center
       - gnome-settings-daemon
       - gnome-initial-setup
       - gnome-software
