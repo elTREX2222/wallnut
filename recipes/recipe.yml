@@ -43,6 +43,8 @@ modules:
       - gnome-shell-extension-just-perfection
       - gnome-shell.switcheroo
       - gnome-browser-connector
+      - gnome-shell-extension-hotedge
+      - gnome-shell-extension-hanabi
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
