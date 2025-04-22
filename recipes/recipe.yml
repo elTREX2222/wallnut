@@ -33,18 +33,18 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - gnome-session
-      - gnome-session-*
-      - gnome-remote-desktop
-      - xdg-desktop-portal-gnome
-      - nautilus
-      - gnome-shell
-      - gdm
-      - gnome-shell-extension-just-perfection
-      - gnome-shell.switcheroo
-      - gnome-browser-connector
-      - gnome-shell-extension-hotedge
-      - gnome-shell-extension-hanabi
+      #- gnome-session
+      #- gnome-session-*
+      #- gnome-remote-desktop
+      #- xdg-desktop-portal-gnome
+      #- nautilus
+      #- gnome-shell
+      #- gdm
+      #- gnome-shell-extension-just-perfection
+      #- gnome-shell.switcheroo
+      #- gnome-browser-connector
+      #- gnome-shell-extension-hotedge
+      #- gnome-shell-extension-hanabi
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
