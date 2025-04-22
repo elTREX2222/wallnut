@@ -54,7 +54,7 @@ modules:
       - gnome-shell
       - gnome-control-center
       - gnome-settings-daemon
-      - cheese
+      #- cheese
       - eog
       - evince
       - evince-djvu
