@@ -1,0 +1,8 @@
+ublue_variants:
+  - label: tbangit/wallnut
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: wallnut
+        info: GNOME
+      - label: wallnut-cinnamon
+        info: Cinnamon
