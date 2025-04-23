@@ -76,6 +76,12 @@ jobs:
           config-file: ./iso.toml
           image: ${{ env.IMAGE_REGISTRY }}:${{ env.DEFAULT_TAG }}
 
+      - name: Show ISO size
+        run: |
+          echo "Build output dir: ${{ steps.build.outputs.output-directory }}"
+          du -sh ${{ steps.build.outputs.output-directory }} || true
+          find ${{ steps.build.outputs.output-directory }} -type f -exec ls -lh {} \;
+      
       - name: Upload ISOs and Checksum to Job Artifacts
         if: inputs.upload-to-s3 != true && github.event_name != 'pull_request'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
